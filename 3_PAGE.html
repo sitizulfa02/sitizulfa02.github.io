@@ -1,0 +1,156 @@
+<html> 
+ 
+<head><title> WEBSITE SURVEY </title></head> 
+ 
+<body background="Background_3.jpg"> 
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<style> 
+body 
+{   margin: 0; 
+    font-family: Helonia; 
+} 
+ 
+.topnav 
+{  
+    overflow: hidden;   
+    background-color: #E9E0D1; 
+} 
+ 
+.topnav a 
+{   
+    float: left;  
+    color: #000000;   
+    text-align: center;   
+    padding: 14px 16px;   
+    text-decoration: none;   
+    font-size: 17px; 
+} 
+ 
+.topnav a:hover 
+{   
+    background-color: #CDBCB4;   
+    color: black; 
+} 
+ 
+.topnav a.active 
+{    
+    background-color: #D5BFAA;   
+    color: white; 
+} 
+
+</style> 
+ 
+<body> 
+ 
+<div class="topnav"> 
+  <a class="active" href="1_PAGE.html">Home</a> 
+  <a href="2_PAGE.html">Favourite Activities</a> 
+  <a href="3_PAGE.html">Website Survey</a> 
+  <a href="4_PAGE.html">Contact Me</a> 
+</div> 
+
+<script>
+
+function Validateform() 
+
+{
+		
+var name =document.forms.SurForm.Name.value;
+var age =document.forms.SurForm.Age.value;
+var phone =document.forms.SurForm.Phone.value;
+var surPhone=/^\d{10}$/;
+var surName = /\d+$/g;
+
+if (name == "" || surName.test(name)) 
+{
+      window.alert("Please enter your name properly.");
+      name.focus();
+	return false;
+}
+				
+if (age == "" || !surAge.test(age)) 
+{
+	window.alert("Please enter your age properly.");
+	age.focus();
+	return false;
+}
+
+if (phone == "" || !surPhone.test(phone)) 
+{
+	alert("Please enter valid phone number.");
+	phone.focus();
+	return false;
+}
+
+
+return true;
+
+}
+</script>
+
+<center>
+
+<h1>SURVEY WEBSITE VISIT!</h1>
+
+<form name="SurForm" onsubmit="return Validateform()" method="post">
+
+<table>
+
+<tr>
+<td><p>Name: <input type="text"size="30" name="Name"></p></td>
+</tr>
+
+<tr>
+<td><p>Age: <input type="text"size="31" name="Age"></p></td>
+</tr>
+
+<tr>
+<td><p>Phone: <input type="text"size="30" name="Phone"></p></td>
+</tr>
+<br>
+
+<table>
+
+<p>Gender:
+    <input type='radio'name='gender'value='male'>Male
+    <input type='radio'name='gender'value='female'>Female
+    <input type='radio'name='gender'value='other'>Other
+<br>
+<table>
+<p>Favourite Social Media:<br>
+    <tr><td><input type='checkbox'name='facebook'>Facebook<br></tr></td>
+    <tr><td><input type='checkbox'name='twitter'>Twitter<br></tr></td>
+    <tr><td><input type='checkbox'name='insta'>Instagram</tr></td>
+</table>
+<br>
+
+		
+<p>Select Your Occupation:
+<select type="text" value="" name="Subject">
+	<option>STUDENT</option>
+	<option>EMPLOYED</option>
+	<option>UNEMPLOYED</option>
+	<option>OTHER</option>
+	</select>
+</p>
+
+<br>
+
+<p>Comment:
+    <textarea name='vision'rows='4'cols='40'>Write your comment here</textarea>
+<br>
+<br>
+
+			
+<input type="submit"value="Submit" name="Submit">
+<input type="reset"value="Reset" name="Reset">
+</p>
+
+
+</form> 
+</center> 
+</body> 
+</html> 
+ 	 
